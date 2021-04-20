@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	https://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+
+	<bean id="foo" class="pdf.p43.Foo" p:email="ohjuah0119@naver.com">
+	<property name="bar">
+		<bean class="pdf.p43.Bar"/>
+	</property>
+	</bean>
+	
+	
+</beans>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	https://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="foo1" class="pdf.p36.Foo" > </bean>
+	<bean id="foo" class="pdf.p36.Foo" >
+		<constructor-arg ref="baz"/>
+		<constructor-arg >
+		<ref bean="bar"/>
+		</constructor-arg>
+		
+	</bean>
+		<bean id="foo2" class="pdf.p36.Foo" >
+		
+		<constructor-arg index="0">
+		<ref bean="bar"/>
+		</constructor-arg>
+		<constructor-arg index="1" ref="bar2"/>
+	</bean>
+	<bean id="bar" class="pdf.p36.Bar" > </bean>
+	<bean id="bar2" class="pdf.p36.Bar" > </bean>
+	<bean id="baz" class="pdf.p36.Baz" > </bean>
+	
+	<bean id="fooSet" class="pdf.p36.Foo">
+		<property name="bar" ref="bar"></property>
+		<property name="name" value="ttttt"></property>
+	</bean>
+	
+	
+		
+</beans>
